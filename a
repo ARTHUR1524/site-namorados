@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Nosso 1 Ano Juntos 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Quicksand', sans-serif;
+    }
+    body {
+      background: linear-gradient(to bottom, #ffe6f0, #fff0f5);
+      color: #333;
+      text-align: center;
+      overflow-x: hidden;
+    }
+    h1 {
+      margin-top: 30px;
+      font-size: 2.5rem;
+      color: #d63384;
+    }
+    p {
+      margin: 20px;
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .gallery {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin: 30px;
+    }
+    .gallery img {
+      border-radius: 15px;
+      width: 250px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    .heart {
+      animation: float 3s ease-in-out infinite;
+      color: red;
+      font-size: 2rem;
+    }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+    .start-button {
+      background-color: #ff66b2;
+      color: white;
+      padding: 15px 25px;
+      border: none;
+      border-radius: 20px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      margin-top: 30px;
+      transition: background-color 0.3s;
+    }
+    .start-button:hover {
+      background-color: #ff3399;
+    }
+    .hidden {
+      display: none;
+    }
+    .final {
+      background: #fff0f5;
+      padding: 20px;
+      margin-top: 30px;
+      border-top: 2px dashed pink;
+    }
+  </style>
+</head>
+<body>
+  <div id="start-screen">
+    <h1>🎁 Clique para começar a surpresa 💖</h1>
+    <button class="start-button" onclick="startExperience()">Começar</button>
+  </div>
+
+  <div id="main-content" class="hidden">
+    <h1>💖 Feliz 1 Ano de Namoro 💖</h1>
+    <div class="heart">❤️❤️❤️</div>
+
+    <p>Hoje é um dia muito especial pra gente, pra mim, pra você, pois hoje faz um ano que eu declarei o meu amor por você, que eu dei tudo que eu tinha nas suas mãos.</p>
+    <p>Você pensa que é complicada, difícil de lidar, mas é o contrário: você é incrível, uma pessoa maravilhosa, minha pessoa.</p>
+    <p>Eu espero que esse seja um de muitos aniversários de namoro que vamos passar juntos. Eu nunca vou te esquecer, nunca vou querer outra pessoa. Só você. Até o fim da minha vida. Vou te esperar até o fim do mundo. Não importa se for 5, 6, 7 anos...</p>
+    <p>Eu te amo muito minha princesa. Você é a pessoa mais incrível que eu conheci. Não deveria se lamentar por coisas fúteis como "meu cabelo tá um fiasco hoje" kkkk. Seu cabelo é lindo, seus olhos brilham mesmo no escuro, seu sorriso deixa qualquer um feliz.</p>
+    <p>Você é a mais linda, perfeita e fofa que eu já conheci. Eu quero que nosso dia seja perfeito. Te amo muito muito muito, minha princesa! 💞</p>
+
+    <div class="gallery">
+      <img src="20250407_212209.jpg" alt="foto1">
+      <img src="20250407_212222.jpg" alt="foto2">
+      <img src="20250604_172702.jpg" alt="foto3">
+    </div>
+
+    <audio id="romanticMusic" autoplay>
+      <source src="Aliana - Tribalistas lyric video.mp3" type="audio/mp3">
+      Seu navegador não suporta áudio HTML.
+    </audio>
+
+    <div class="final">
+      <p><strong>Clique aqui e me promete que vai ser pra sempre? 💍</strong></p>
+    </div>
+  </div>
+
+  <script>
+    function startExperience() {
+      document.getElementById('start-screen').style.display = 'none';
+      document.getElementById('main-content').classList.remove('hidden');
+      document.getElementById('romanticMusic').play();
+    }
+  </script>
+</body>
+</html>
